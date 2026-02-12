@@ -56,7 +56,7 @@ const Navbar = () => {
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link to="/" className="flex items-baseline group">
-                        <span className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-white">PIXELSHIFT</span>
+                        <span className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-white">BOLTSTUDIO</span>
                         <span className="font-mono text-[10px] ml-2 text-primary opacity-70 group-hover:opacity-100 transition-opacity hidden lg:inline tracking-tighter uppercase font-bold">
                             [ AI_SERVICES_CORE_v2.0 ]
                         </span>

@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
                     <div className="md:col-span-2">
                         <div className="flex items-baseline mb-8 group">
-                            <span className="text-3xl md:text-5xl font-wide font-bold uppercase italic tracking-tighter">PIXELSHIFT</span>
+                            <span className="text-3xl md:text-5xl font-wide font-bold uppercase italic tracking-tighter">BOLTSTUDIO</span>
                             <span className="font-pixel text-[10px] ml-4 text-primary bg-black text-white px-2 py-1">
                                 [ GLOBAL_CORE_v4.2 ]
                             </span>
@@ -40,7 +40,7 @@ const Footer = () => {
                             <li><Link to="/privacy" className="hover:text-primary transition-all hover:translate-x-1 inline-block">Privacy_Policy</Link></li>
                             <li><Link to="/terms" className="hover:text-primary transition-all hover:translate-x-1 inline-block">Terms_of_Srv</Link></li>
                             <li className="mt-8 pt-8 border-t border-black/5">
-                                <span className="font-pixel text-[10px] text-black/40">© 2026 PIXELSHIFT</span>
+                                <span className="font-pixel text-[10px] text-black/40">© 2026 BOLTSTUDIO</span>
                             </li>
                         </ul>
                     </div>
