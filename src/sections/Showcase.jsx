@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { slides } from '../data/slides';
 
 
+const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
+
 const Showcase = () => {
     const [width, setWidth] = useState(0);
     const [activeBg, setActiveBg] = useState(0);
@@ -12,7 +14,9 @@ const Showcase = () => {
     useEffect(() => {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
 
-        // Auto-rotate background every 5 seconds
+        // Only auto-rotate on desktop to save resources on mobile
+        if (isMobile()) return;
+
         const interval = setInterval(() => {
             setActiveBg((prev) => (prev + 1) % slides.length);
         }, 5000);
@@ -27,21 +31,21 @@ const Showcase = () => {
                 <AnimatePresence mode="popLayout">
                     <motion.div
                         key={slides[activeBg].id}
-                        initial={{ opacity: 0, scale: 1.1 }}
+                        initial={{ opacity: 0, scale: isMobile() ? 1 : 1.1 }}
                         animate={{ opacity: 0.2, scale: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 2, ease: "easeInOut" }}
-                        className="absolute inset-0"
+                        className="absolute inset-0 will-change-transform"
                     >
                         <img
                             src={slides[activeBg].image}
                             alt="Background"
-                            className="w-full h-full object-cover filter blur-3xl contrast-125 saturate-150"
+                            className="w-full h-full object-cover md:filter md:blur-3xl md:contrast-125 md:saturate-150 opacity-20 md:opacity-100"
                         />
                         <div className="absolute inset-0 bg-dark-900/50 mix-blend-multiply" />
                     </motion.div>
                 </AnimatePresence>
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay hidden md:block" />
             </div>
             <div className="container mx-auto px-6 mb-12 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6">
@@ -78,7 +82,7 @@ const Showcase = () => {
                                 <img
                                     src={slide.image}
                                     alt={slide.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:brightness-50"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:brightness-50 transform-gpu"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-90" />
                             </div>

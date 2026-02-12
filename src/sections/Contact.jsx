@@ -70,7 +70,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     onSubmit={handleSubmit}
-                    className="bg-[#050510]/80 backdrop-blur-xl p-4 sm:p-6 md:p-16 border-2 border-white/10 shadow-[10px_10px_0px_0px_rgba(139,0,0,0.1)] md:shadow-[40px_40px_0px_0px_rgba(139,0,0,0.1)] relative overflow-hidden"
+                    className="bg-[#050510]/95 md:bg-[#050510]/80 md:backdrop-blur-xl p-4 sm:p-6 md:p-16 border-2 border-white/10 shadow-[10px_10px_0px_0px_rgba(139,0,0,0.1)] md:shadow-[40px_40px_0px_0px_rgba(139,0,0,0.1)] relative overflow-hidden"
                 >
                     {/* Form Background Pattern */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />

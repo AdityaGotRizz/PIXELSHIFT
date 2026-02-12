@@ -14,12 +14,12 @@ const TrustedBy = () => {
                     className="relative group inline-block"
                 >
                     {/* Glow effect behind the image */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-primary/20 to-secondary/20 blur-[60px] md:blur-[120px] rounded-full group-hover:opacity-100 opacity-70 transition-all" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-primary/20 to-secondary/20 blur-[20px] md:blur-[120px] rounded-full group-hover:opacity-100 opacity-70 transition-all pointer-events-none" />
 
                     <img
                         src={trustedByImg}
                         alt="Trusted by the Best"
-                        className="relative z-10 w-full max-w-5xl mx-auto rounded-lg md:rounded-xl shadow-[0_0_30px_rgba(167,139,250,0.2)] border border-primary/20"
+                        className="relative z-10 w-full max-w-5xl mx-auto rounded-lg md:rounded-xl shadow-[0_0_30px_rgba(167,139,250,0.2)] border border-primary/20 transform-gpu"
                     />
                 </motion.div>
             </div>

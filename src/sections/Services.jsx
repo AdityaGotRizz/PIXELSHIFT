@@ -69,18 +69,18 @@ const Services = () => {
                                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#000000_100%)] opacity-80" />
 
                                 {/* Scanlines */}
-                                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.05] mix-blend-overlay" />
+                                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.05] mix-blend-overlay hidden md:block" />
 
                                 {/* Decorative Elements */}
                                 <div className="absolute top-20 right-[15%] w-48 h-48 bg-[#8b0000]/20 blur-3xl animate-pulse" />
-                                <div className="absolute bottom-40 left-[10%] w-64 h-32 border border-[#8b0000]/20 -rotate-12 backdrop-blur-sm" />
+                                <div className="absolute bottom-40 left-[10%] w-64 h-32 border border-[#8b0000]/20 -rotate-12 md:backdrop-blur-sm" />
                             </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
 
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1)_0%,transparent_70%)]" />
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay hidden md:block" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -132,7 +132,7 @@ const Services = () => {
                                 exit={{ opacity: 0, y: -20 }}
                                 className="text-center"
                             >
-                                <div className="inline-block border border-[#8b0000]/50 px-4 py-1 rounded-full text-[10px] font-pixel text-[#8b0000] uppercase tracking-[0.3em] mb-6 bg-[#8b0000]/10 backdrop-blur-sm">
+                                <div className="inline-block border border-[#8b0000]/50 px-4 py-1 rounded-full text-[10px] font-pixel text-[#8b0000] uppercase tracking-[0.3em] mb-6 bg-[#8b0000]/10 md:backdrop-blur-sm">
                                     IDENTITY_FILE // ALPHA_001
                                 </div>
                                 <h2 className="text-3xl sm:text-4xl md:text-8xl font-wide font-bold text-white uppercase tracking-tighter">
@@ -206,7 +206,7 @@ const Services = () => {
                                 className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8"
                             >
                                 {/* David */}
-                                <div className="group/profile relative border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">
+                                <div className="group/profile relative border border-white/10 bg-white/5 md:backdrop-blur-sm overflow-hidden transform-gpu">
                                     <div className="aspect-[4/5] relative overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80" />
                                         <img src="/david-portrait.png" className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="David" />
@@ -226,7 +226,7 @@ const Services = () => {
                                 </div>
 
                                 {/* Aditya */}
-                                <div className="group/profile relative border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">
+                                <div className="group/profile relative border border-white/10 bg-white/5 md:backdrop-blur-sm overflow-hidden transform-gpu">
                                     <div className="aspect-[4/5] relative overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80" />
                                         <img src={industrialGlitch} className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="Aditya" />
@@ -246,7 +246,7 @@ const Services = () => {
                                 </div>
 
                                 {/* Max Larson */}
-                                <div className="group/profile relative border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">
+                                <div className="group/profile relative border border-white/10 bg-white/5 md:backdrop-blur-sm overflow-hidden transform-gpu">
                                     <div className="aspect-[4/5] relative overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80" />
                                         <img src="/MAX 1.png" className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="Max" />

@@ -26,6 +26,7 @@ const VideoLoop = () => {
     };
 
     const handleTimeUpdate = () => {
+        if (typeof window !== 'undefined' && window.innerWidth < 768) return; // Disable expensive loop check on mobile
         if (videoRef.current) {
             // Trim the last 9 seconds (Total duration ~52.65s, loop at 43.65s)
             if (videoRef.current.currentTime >= 43.65) {
@@ -47,7 +48,8 @@ const VideoLoop = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onTimeUpdate={handleTimeUpdate}
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-full object-cover cursor-pointer transform-gpu"
+                preload="metadata"
             >
                 <source src="/From KlickPin CF Shape the Future [Video] _ Motion graphics inspiration Motion graphics design Motion design animation.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

@@ -56,6 +56,7 @@ const Process = () => {
                 </div>
 
                 <div className="relative">
+
                     {/* Timeline Line (Desktop) */}
                     <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-black/10 -translate-x-1/2" />
 
@@ -67,7 +68,7 @@ const Process = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className={`flex flex-col md:flex-row gap-10 md:gap-20 items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
+                                className={`flex flex-col md:flex-row gap-10 md:gap-20 items-center transform-gpu ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
                             >
                                 {/* Number / Icon Side */}
                                 <div className="md:w-1/2 flex justify-center md:justify-end relative">

@@ -14,9 +14,13 @@ const Hero = () => {
 
     // Auto-rotate background every 5 seconds
     useEffect(() => {
+        // Only run auto-rotate on desktop to save resources on mobile
+        if (isMobile()) return;
+
         const interval = setInterval(() => {
             setActiveBg((prev) => (prev + 1) % slides.length);
         }, 5000);
+
         return () => clearInterval(interval);
     }, []);
 
@@ -59,26 +63,26 @@ const Hero = () => {
                 <AnimatePresence mode="popLayout">
                     <motion.div
                         key={slides[activeBg].id}
-                        initial={{ opacity: 0, scale: 1.1 }}
+                        initial={{ opacity: 0, scale: isMobile() ? 1 : 1.1 }}
                         animate={{ opacity: 0.3, scale: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 2, ease: "easeInOut" }}
-                        className="absolute inset-0"
+                        className="absolute inset-0 will-change-transform"
                     >
                         <img
                             src={slides[activeBg].image}
                             alt="Background"
-                            className="w-full h-full object-cover filter blur-[80px] contrast-125 saturate-150"
+                            className="w-full h-full object-cover md:filter md:blur-[80px] md:contrast-125 md:saturate-150 opacity-40 md:opacity-100"
                         />
                         <div className="absolute inset-0 bg-dark-950/40 mix-blend-multiply" />
                     </motion.div>
                 </AnimatePresence>
 
                 {/* Animated Mesh Background */}
-                <div className="absolute inset-0 bg-mesh opacity-20 blur-[100px] animate-mesh" />
+                <div className="absolute inset-0 bg-mesh opacity-20 md:blur-[100px] md:animate-mesh will-change-[background-position,content]" />
 
                 {/* Subtle Grain or Pattern Overlay */}
-                <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none"
+                <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none hidden md:block"
                     style={{ backgroundImage: `url("https://grainy-gradients.vercel.app/noise.svg")` }} />
             </div>
 
@@ -93,7 +97,7 @@ const Hero = () => {
                         [ SYSTEM_STATUS: OPERATIONAL ]
                     </span>
 
-                    <h1 className="text-4xl sm:text-6xl md:text-9xl font-black mb-4 md:mb-6 leading-[0.85] tracking-tighter uppercase italic">
+                    <h1 className="text-4xl sm:text-6xl md:text-9xl font-black mb-4 md:mb-6 leading-[0.85] tracking-tighter uppercase italic transform-gpu">
                         Accelerate <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent-cyan to-secondary drop-shadow-[0_0_20px_rgba(167,139,250,0.5)]">
                             Evolution
