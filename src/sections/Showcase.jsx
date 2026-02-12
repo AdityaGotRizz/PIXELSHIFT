@@ -50,18 +50,18 @@ const Showcase = () => {
             <div className="container mx-auto px-6 mb-12 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6">
                     <div>
-                        <div className="inline-block border border-accent-blue/30 px-3 py-1 rounded-none text-[10px] font-pixel text-accent-blue uppercase tracking-widest mb-4 bg-accent-blue/5">
-                            Project_Index_2025
+                        <div className="inline-block border border-accent-blue/30 px-3 py-1 rounded-full text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-4 bg-accent-blue/5">
+                            Selected Projects
                         </div>
                         <Link to="/work" className="block group w-fit">
-                            <h2 className="text-3xl sm:text-5xl md:text-8xl font-black mb-2 text-white uppercase italic tracking-tighter leading-none group-hover:text-accent-blue transition-colors duration-300">
-                                Recent_<span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-white group-hover:text-white group-hover:bg-none">Work</span>
+                            <h2 className="text-4xl sm:text-5xl md:text-8xl font-black mb-2 text-white uppercase tracking-tighter leading-none group-hover:text-accent-blue transition-colors duration-300">
+                                Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-white group-hover:text-white group-hover:bg-none">Work</span>
                                 <span className="inline-block ml-4 text-2xl align-top opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-accent-blue">↗</span>
                             </h2>
                         </Link>
                     </div>
-                    <p className="text-accent-blue font-mono text-xs uppercase tracking-widest mb-4 animate-pulse">
-                        [ SCROLL_TO_NAVIGATE &gt;&gt; ]
+                    <p className="text-accent-blue font-bold text-[10px] uppercase tracking-[0.2em] mb-4 animate-pulse">
+                        Swipe to explore &gt;&gt;
                     </p>
                 </div>
             </div>
@@ -105,10 +105,10 @@ const Showcase = () => {
 
                                 {/* Bottom Info */}
                                 <div>
-                                    <span className="text-secondary text-[10px] font-mono font-bold uppercase tracking-widest mb-3 block">
-                                        // CATEGORY: {slide.category}
+                                    <span className="text-secondary text-[10px] font-bold uppercase tracking-widest mb-3 block">
+                                        {slide.category}
                                     </span>
-                                    <h3 className="text-3xl md:text-5xl font-black text-white leading-[0.9] uppercase italic tracking-tighter mb-4 drop-shadow-xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent-blue transition-all duration-300">
+                                    <h3 className="text-3xl md:text-5xl font-black text-white leading-[0.9] uppercase tracking-tighter mb-4 drop-shadow-xl group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent-blue transition-all duration-300">
                                         {slide.title}
                                     </h3>
 

@@ -5,31 +5,31 @@ import techTexture from '../assets/images/tech-texture.jpg';
 const steps = [
     {
         number: "01",
-        title: "Neural Calibration",
-        subtitle: "Discovery Phase",
-        description: "We align with your operational frequency to map out high-impact vectors.",
-        details: ["Needs Analysis", "Data Audit", "Scope Matrix"]
+        title: "Discovery",
+        subtitle: "Research Phase",
+        description: "We dive deep into your goals to map out high-impact strategies.",
+        details: ["Needs Analysis", "Market Research", "Project Scope"]
     },
     {
         number: "02",
-        title: "Architecture Design",
-        subtitle: "Strategy Phase",
-        description: "Designing the blueprint for your digital ecosystem with precision.",
-        details: ["Stack Selection", "Model Training", "UI Blueprints"]
+        title: "Strategy",
+        subtitle: "Design Phase",
+        description: "Designing a custom blueprint for your digital growth with precision.",
+        details: ["Stack Selection", "UI Blueprints", "Creative Direction"]
     },
     {
         number: "03",
-        title: "Core Synthesis",
-        subtitle: "Implementation",
-        description: "Deploying the codebase and integrating neural pathways for automation.",
-        details: ["Development", "API Integration", "Rigorous Testing"]
+        title: "Development",
+        subtitle: "Build Phase",
+        description: "Bringing the vision to life with clean code and seamless integrations.",
+        details: ["Custom Build", "Integrations", "Rigorous Testing"]
     },
     {
         number: "04",
-        title: "Hyper-Growth",
-        subtitle: "Scale Phase",
-        description: "Continuous optimization loops to ensure system evolution.",
-        details: ["Optimization", "Monitoring", "Iteration"]
+        title: "Scaling",
+        subtitle: "Growth Phase",
+        description: "Continuous optimization to ensure your system evolves and scales.",
+        details: ["Monitoring", "Optimization", "Iteration"]
     }
 ];
 
@@ -44,14 +44,14 @@ const Process = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="mb-24 flex flex-col items-center text-center">
-                    <div className="border border-black px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-4 bg-black/5">
-                        Execution_Model_v4.0
+                    <div className="border border-black px-6 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 bg-black/5">
+                        Our Workflow
                     </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-7xl font-wide font-bold mb-8 uppercase tracking-tighter leading-none">
-                        Execution <span className="text-primary italic">Protocol</span>
+                    <h2 className="text-4xl sm:text-6xl md:text-8xl font-wide font-black mb-8 uppercase tracking-tighter leading-none">
+                        Our <span className="text-primary italic">Process</span>
                     </h2>
-                    <p className="font-script text-2xl text-primary -rotate-2 -mt-4">
-                        (Systematic approach to digital evolution)
+                    <p className="text-gray-500 text-lg md:text-xl font-medium max-w-xl">
+                        A clear, systematic path from your vision to digital reality.
                     </p>
                 </div>
 

@@ -93,23 +93,19 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="inline-block py-1 px-3 rounded-sm bg-accent-lime text-black text-[10px] font-mono font-bold mb-6 tracking-tighter uppercase">
-                        [ SYSTEM_STATUS: OPERATIONAL ]
+                    <span className="inline-block py-1 px-4 rounded-full bg-accent-lime text-black text-[10px] font-bold mb-6 tracking-widest uppercase">
+                        Designing the Future
                     </span>
 
-                    <h1 className="text-4xl sm:text-6xl md:text-9xl font-black mb-4 md:mb-6 leading-[0.85] tracking-tighter uppercase italic transform-gpu">
-                        Accelerate <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent-cyan to-secondary drop-shadow-[0_0_20px_rgba(167,139,250,0.5)]">
-                            Evolution
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl font-black mb-4 md:mb-6 leading-none tracking-tighter uppercase transform-gpu">
+                        Scale Your <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent-cyan to-secondary">
+                            Creative Vision
                         </span>
                     </h1>
 
-                    <p className="text-sm sm:text-lg md:text-xl text-gray-400 max-w-4xl mx-auto mb-6 md:mb-10 leading-relaxed font-light px-2">
-                        We help businesses Scale by Integrating <span className="text-white font-medium">AI-powered Marketing Content</span> for E-Commerce, Brands, Influencers & Local Businesses.
-                        <br className="hidden md:block" />
-                        <span className="text-primary/80">Product photography | Marketing videos | Social Media Content, Commercial Ads</span>.
-                        <br className="hidden md:block" />
-                        From Website Generation to Automated Workflows, We build the Future AND Much More.
+                    <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-medium">
+                        We empower businesses to scale with AI-driven content. From high-end <span className="text-white">product photography</span> to <span className="text-white">automated marketing workflows</span>, we build the future of your brand.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-10 md:mb-20">
@@ -133,9 +129,9 @@ const Hero = () => {
                             <div className="absolute inset-0 overflow-hidden">
                                 <img src={techTexture} className="w-full h-full object-cover opacity-40 mix-blend-overlay" alt="" />
                                 <div className="absolute inset-0 bg-gradient-to-br from-dark-950 to-accent-blue/20 flex flex-col items-center justify-center p-8">
-                                    <p className="text-accent-blue font-mono text-xs mb-2 tracking-widest uppercase">Encryption Mesh V2.0</p>
-                                    <div className="w-full h-[2px] bg-accent-blue/30 mb-8" />
-                                    <p className="text-white font-mono text-3xl md:text-5xl font-black tracking-tighter uppercase italic">DATA_CORE_ACTIVE</p>
+                                    <p className="text-accent-blue font-bold text-xs mb-2 tracking-widest uppercase">System Analytics</p>
+                                    <div className="w-full h-[1px] bg-accent-blue/20 mb-8" />
+                                    <p className="text-white text-3xl md:text-5xl font-black tracking-tighter uppercase">Growth Active</p>
                                 </div>
                             </div>
 
