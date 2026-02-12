@@ -6,6 +6,8 @@ import heroBg from '../assets/images/hero-bg.jpg';
 import techTexture from '../assets/images/tech-texture.jpg';
 import { slides } from '../data/slides';
 
+const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
+
 const Hero = () => {
     const ref = useRef(null);
     const [activeBg, setActiveBg] = useState(0);
@@ -49,7 +51,7 @@ const Hero = () => {
         <section
             ref={ref}
             onMouseMove={handleMouseMove}
-            className="relative min-h-[120vh] flex flex-col items-center pt-20"
+            className="relative min-h-screen md:min-h-[120vh] flex flex-col items-center pt-20"
         >
             {/* Background Wrapper */}
             <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-dark-950">
@@ -91,14 +93,14 @@ const Hero = () => {
                         [ SYSTEM_STATUS: OPERATIONAL ]
                     </span>
 
-                    <h1 className="text-6xl md:text-9xl font-black mb-6 leading-[0.85] tracking-tighter uppercase italic">
+                    <h1 className="text-4xl sm:text-6xl md:text-9xl font-black mb-4 md:mb-6 leading-[0.85] tracking-tighter uppercase italic">
                         Accelerate <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent-cyan to-secondary drop-shadow-[0_0_20px_rgba(167,139,250,0.5)]">
                             Evolution
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto mb-10 leading-relaxed font-light">
+                    <p className="text-sm sm:text-lg md:text-xl text-gray-400 max-w-4xl mx-auto mb-6 md:mb-10 leading-relaxed font-light px-2">
                         We help businesses Scale by Integrating <span className="text-white font-medium">AI-powered Marketing Content</span> for E-Commerce, Brands, Influencers & Local Businesses.
                         <br className="hidden md:block" />
                         <span className="text-primary/80">Product photography | Marketing videos | Social Media Content, Commercial Ads</span>.
@@ -106,11 +108,11 @@ const Hero = () => {
                         From Website Generation to Automated Workflows, We build the Future AND Much More.
                     </p>
 
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-20">
-                        <Button variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />} className="shadow-[0_0_20px_rgba(107,33,168,0.5)] hover:shadow-[0_0_30px_rgba(107,33,168,0.7)]">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-10 md:mb-20">
+                        <Button variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />} className="shadow-[0_0_20px_rgba(107,33,168,0.5)] hover:shadow-[0_0_30px_rgba(107,33,168,0.7)] w-full sm:w-auto justify-center">
                             Explore Services
                         </Button>
-                        <Button variant="secondary" size="lg" icon={<Play className="w-5 h-5 fill-current" />}>
+                        <Button variant="secondary" size="lg" icon={<Play className="w-5 h-5 fill-current" />} className="w-full sm:w-auto justify-center">
                             Watch Showreel
                         </Button>
                     </div>
@@ -118,8 +120,8 @@ const Hero = () => {
 
                 {/* Dropping Dashboard Mockup */}
                 <motion.div
-                    style={{ y: dropY, perspective: '1000px' }}
-                    className="mx-auto max-w-5xl relative z-20"
+                    style={{ y: isMobile() ? 0 : dropY, perspective: '1000px' }}
+                    className="mx-auto max-w-5xl relative z-20 hidden sm:block"
                 >
                     <div className="w-full h-auto rounded-xl border border-white/20 bg-white/5 backdrop-blur-md p-2 shadow-2xl shadow-primary/30">
                         <div className="w-full aspect-[16/9] rounded-lg bg-dark-800 overflow-hidden relative group">

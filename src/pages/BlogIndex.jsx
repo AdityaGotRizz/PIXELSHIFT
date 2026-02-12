@@ -15,7 +15,7 @@ const BlogIndex = () => {
                         <div className="inline-block border border-[#8b0000] px-4 py-1 rounded-full text-[10px] font-pixel text-[#8b0000] uppercase tracking-[0.3em] mb-6 bg-[#8b0000]/10">
                             Neural_Archive_v1.0
                         </div>
-                        <h1 className="text-6xl md:text-9xl font-black text-white uppercase tracking-tighter mb-8 leading-none">
+                        <h1 className="text-4xl sm:text-6xl md:text-9xl font-black text-white uppercase tracking-tighter mb-8 leading-none">
                             System <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8b0000] to-white italic">Logs</span>
                         </h1>
                         <p className="font-mono text-gray-400 max-w-xl text-lg">
@@ -39,7 +39,7 @@ const BlogIndex = () => {
                                                 <span className="w-1 h-1 bg-[#8b0000] rounded-full" />
                                                 <span className="text-[#8b0000] font-bold">[{article.category}]</span>
                                             </div>
-                                            <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#8b0000] transition-all duration-300">
+                                            <h2 className="text-2xl md:text-5xl font-bold text-white uppercase tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#8b0000] transition-all duration-300">
                                                 {article.title}
                                             </h2>
                                             <p className="text-gray-400 font-medium max-w-2xl">

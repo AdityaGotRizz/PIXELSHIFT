@@ -28,7 +28,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-40 bg-[#08081a] text-white relative overflow-hidden">
+        <section id="contact" className="py-20 md:py-40 bg-[#08081a] text-white relative overflow-hidden">
             {/* Dark Industrial Glitch Collage Background */}
             {/* Tech Grid Background - Dark/Red Theme */}
             <div className="absolute inset-0 z-0 overflow-hidden bg-black">
@@ -46,7 +46,7 @@ const Contact = () => {
                 <div className="absolute bottom-40 left-[10%] w-64 h-32 border border-[#8b0000]/20 -rotate-12 backdrop-blur-sm" />
 
                 {/* Large Background Text */}
-                <div className="absolute bottom-10 left-10 flex flex-col items-start opacity-10 select-none pointer-events-none">
+                <div className="absolute bottom-10 left-10 flex-col items-start opacity-10 select-none pointer-events-none hidden md:flex">
                     <span className="text-9xl font-wide font-bold italic tracking-tighter leading-none text-[#8b0000]">ESTA</span>
                     <span className="text-6xl font-pixel -mt-4 text-white/50">1859.AX</span>
                 </div>
@@ -57,10 +57,10 @@ const Contact = () => {
                     <div className="inline-block bg-[#8b0000] text-white px-6 py-2 mb-8 font-wide font-bold text-sm skew-x-[-12deg] tracking-[0.4em] shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
                         ESTA_1859 // OVERRIDE_ACCESS
                     </div>
-                    <h2 className="text-5xl md:text-9xl font-wide font-bold mb-6 uppercase tracking-tighter leading-none text-white">
+                    <h2 className="text-3xl sm:text-5xl md:text-9xl font-wide font-bold mb-4 md:mb-6 uppercase tracking-tighter leading-none text-white">
                         Access <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8b0000] to-primary italic">_Protocol</span>
                     </h2>
-                    <p className="font-script text-3xl text-[#8b0000] -rotate-2">
+                    <p className="font-script text-xl sm:text-3xl text-[#8b0000] -rotate-2">
                         (Establishing secure infrastructure link...)
                     </p>
                 </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     onSubmit={handleSubmit}
-                    className="bg-[#050510]/80 backdrop-blur-xl p-6 md:p-16 border-2 border-white/10 shadow-[20px_20px_0px_0px_rgba(139,0,0,0.1)] md:shadow-[40px_40px_0px_0px_rgba(139,0,0,0.1)] relative overflow-hidden"
+                    className="bg-[#050510]/80 backdrop-blur-xl p-4 sm:p-6 md:p-16 border-2 border-white/10 shadow-[10px_10px_0px_0px_rgba(139,0,0,0.1)] md:shadow-[40px_40px_0px_0px_rgba(139,0,0,0.1)] relative overflow-hidden"
                 >
                     {/* Form Background Pattern */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />

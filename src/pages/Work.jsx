@@ -28,7 +28,7 @@ const Work = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1 }}
-                            className="text-5xl md:text-8xl font-black mb-6 text-white uppercase italic tracking-tighter leading-none"
+                            className="text-3xl sm:text-5xl md:text-8xl font-black mb-6 text-white uppercase italic tracking-tighter leading-none"
                         >
                             All_<span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-white">Work</span>
                         </motion.h1>

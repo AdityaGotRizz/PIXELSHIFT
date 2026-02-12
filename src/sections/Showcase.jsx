@@ -50,7 +50,7 @@ const Showcase = () => {
                             Project_Index_2025
                         </div>
                         <Link to="/work" className="block group w-fit">
-                            <h2 className="text-5xl md:text-8xl font-black mb-2 text-white uppercase italic tracking-tighter leading-none group-hover:text-accent-blue transition-colors duration-300">
+                            <h2 className="text-3xl sm:text-5xl md:text-8xl font-black mb-2 text-white uppercase italic tracking-tighter leading-none group-hover:text-accent-blue transition-colors duration-300">
                                 Recent_<span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-white group-hover:text-white group-hover:bg-none">Work</span>
                                 <span className="inline-block ml-4 text-2xl align-top opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-accent-blue">↗</span>
                             </h2>
@@ -71,7 +71,7 @@ const Showcase = () => {
                     {slides.map((slide) => (
                         <motion.div
                             key={slide.id}
-                            className="relative min-w-[320px] h-[500px] md:min-w-[600px] md:h-[700px] overflow-hidden group border border-white/10 bg-dark-800"
+                            className="relative min-w-[280px] h-[420px] sm:min-w-[320px] sm:h-[500px] md:min-w-[600px] md:h-[700px] overflow-hidden group border border-white/10 bg-dark-800"
                         >
                             {/* Image Layer */}
                             <div className="absolute inset-0 z-0">
@@ -84,7 +84,7 @@ const Showcase = () => {
                             </div>
 
                             {/* Content Layer */}
-                            <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12">
+                            <div className="absolute inset-0 z-10 flex flex-col justify-between p-5 sm:p-8 md:p-12">
                                 {/* Top Tags */}
                                 <div className="flex justify-between items-start translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                                     <div className="flex flex-wrap gap-2 max-w-[70%]">

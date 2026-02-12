@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-white text-black pt-24 pb-12 border-t-8 border-black">
+        <footer className="bg-white text-black pt-16 md:pt-24 pb-12 border-t-8 border-black">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-20">
                     <div className="md:col-span-2">
-                        <div className="flex items-baseline mb-8 group">
+                        <div className="flex flex-wrap items-baseline mb-6 md:mb-8 group">
                             <span className="text-3xl md:text-5xl font-wide font-bold uppercase italic tracking-tighter">BOLTSTUDIO</span>
-                            <span className="font-pixel text-[10px] ml-4 text-primary bg-black text-white px-2 py-1">
+                            <span className="font-pixel text-[10px] ml-4 text-primary bg-black text-white px-2 py-1 mt-2 md:mt-0">
                                 [ GLOBAL_CORE_v4.2 ]
                             </span>
                         </div>
-                        <p className="font-script text-3xl text-secondary mb-10 max-w-sm leading-tight -rotate-1">
+                        <p className="font-script text-2xl md:text-3xl text-secondary mb-10 max-w-sm leading-tight -rotate-1">
                             "Transforming energy into digital infrastructure, one pixel at a time."
                         </p>
                         <div className="pt-8 border-t-2 border-dashed border-black/10 inline-block">

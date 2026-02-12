@@ -86,20 +86,20 @@ const Services = () => {
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header & Toggle */}
                 <div className="flex flex-col items-center mb-24">
-                    <div className="flex items-center gap-4 mb-8">
+                    <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-8">
                         <motion.button
                             onClick={() => setViewMode('services')}
-                            className={`px-8 py-6 rounded-none font-pixel text-sm uppercase tracking-widest border-2 transition-all ${viewMode === 'services'
+                            className={`px-6 sm:px-8 py-4 sm:py-6 rounded-none font-pixel text-xs sm:text-sm uppercase tracking-widest border-2 transition-all w-full sm:w-auto text-center ${viewMode === 'services'
                                 ? 'bg-white text-black border-white shadow-[4px_4px_0px_0px_rgba(139,0,0,1)]'
                                 : 'bg-transparent text-white/50 border-white/20 hover:border-white/40'
                                 }`}
                         >
                             [ SERVICES_GRID ]
                         </motion.button>
-                        <div className="w-8 h-[2px] bg-white/10" />
+                        <div className="w-8 h-[2px] bg-white/10 hidden sm:block" />
                         <motion.button
                             onClick={() => setViewMode('profile')}
-                            className={`px-8 py-6 rounded-none font-pixel text-sm uppercase tracking-widest border-2 transition-all ${viewMode === 'profile'
+                            className={`px-6 sm:px-8 py-4 sm:py-6 rounded-none font-pixel text-xs sm:text-sm uppercase tracking-widest border-2 transition-all w-full sm:w-auto text-center ${viewMode === 'profile'
                                 ? 'bg-[#8b0000] text-white border-[#8b0000] shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]'
                                 : 'bg-transparent text-white/50 border-white/20 hover:border-white/40'
                                 }`}
@@ -120,7 +120,7 @@ const Services = () => {
                                 <div className="inline-block border border-primary/30 px-4 py-1 rounded-full text-[10px] font-pixel text-primary uppercase tracking-[0.3em] mb-6 bg-primary/5 backdrop-blur-sm">
                                     Node_Map_v7.0 // Portal_Active
                                 </div>
-                                <h2 className="text-4xl md:text-8xl font-wide font-bold text-white uppercase tracking-tighter">
+                                <h2 className="text-3xl sm:text-4xl md:text-8xl font-wide font-bold text-white uppercase tracking-tighter">
                                     Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent-cyan to-secondary italic">Capabilities</span>
                                 </h2>
                             </motion.div>
@@ -135,7 +135,7 @@ const Services = () => {
                                 <div className="inline-block border border-[#8b0000]/50 px-4 py-1 rounded-full text-[10px] font-pixel text-[#8b0000] uppercase tracking-[0.3em] mb-6 bg-[#8b0000]/10 backdrop-blur-sm">
                                     IDENTITY_FILE // ALPHA_001
                                 </div>
-                                <h2 className="text-4xl md:text-8xl font-wide font-bold text-white uppercase tracking-tighter">
+                                <h2 className="text-3xl sm:text-4xl md:text-8xl font-wide font-bold text-white uppercase tracking-tighter">
                                     System <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8b0000] to-white italic">Architect</span>
                                 </h2>
                             </motion.div>
@@ -154,12 +154,12 @@ const Services = () => {
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+                                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10"
                             >
                                 {services.map((service, index) => (
                                     <motion.div
                                         key={index}
-                                        className="group relative p-8 rounded-none bg-[#fdfaf6] text-black border-4 border-black box-shadow-pixel hover:-translate-y-2 hover:translate-x-1 transition-all duration-300 h-[360px] flex flex-col justify-center items-center text-center cursor-pointer overflow-hidden"
+                                        className="group relative p-6 sm:p-8 rounded-none bg-[#fdfaf6] text-black border-4 border-black box-shadow-pixel hover:-translate-y-2 hover:translate-x-1 transition-all duration-300 h-[300px] sm:h-[360px] flex flex-col justify-center items-center text-center cursor-pointer overflow-hidden"
                                     >
                                         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
                                             <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -203,7 +203,7 @@ const Services = () => {
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8"
                             >
                                 {/* David */}
                                 <div className="group/profile relative border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">

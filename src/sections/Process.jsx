@@ -35,7 +35,7 @@ const steps = [
 
 const Process = () => {
     return (
-        <section id="process" className="relative py-40 overflow-hidden bg-white text-black">
+        <section id="process" className="relative py-20 md:py-40 overflow-hidden bg-white text-black">
             {/* Background Decorations */}
             <div className="absolute inset-0 z-0 opacity-5">
                 <div className="absolute top-10 left-10 w-40 h-40 border-2 border-dashed border-black rounded-full" />
@@ -47,7 +47,7 @@ const Process = () => {
                     <div className="border border-black px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-4 bg-black/5">
                         Execution_Model_v4.0
                     </div>
-                    <h2 className="text-4xl md:text-7xl font-wide font-bold mb-8 uppercase tracking-tighter leading-none">
+                    <h2 className="text-3xl sm:text-4xl md:text-7xl font-wide font-bold mb-8 uppercase tracking-tighter leading-none">
                         Execution <span className="text-primary italic">Protocol</span>
                     </h2>
                     <p className="font-script text-2xl text-primary -rotate-2 -mt-4">
@@ -59,7 +59,7 @@ const Process = () => {
                     {/* Timeline Line (Desktop) */}
                     <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-black/10 -translate-x-1/2" />
 
-                    <div className="space-y-24">
+                    <div className="space-y-16 md:space-y-24">
                         {steps.map((step, index) => (
                             <motion.div
                                 key={index}

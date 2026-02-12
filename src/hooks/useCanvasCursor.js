@@ -177,6 +177,9 @@ const useCanvasCursor = () => {
     };
 
     useEffect(() => {
+        // Disable on touch devices
+        if (window.matchMedia('(pointer: coarse)').matches) return;
+
         renderCanvas();
 
         return () => {
