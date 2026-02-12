@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-900 text-white font-body antialiased;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer utilities {
+  .bg-mesh {
+    background: linear-gradient(-45deg, #A78BFA, #F472B6, #22D3EE, #A3E635);
+    background-size: 400% 400%;
+    animation: mesh 15s ease infinite;
+  }
+
+  @keyframes mesh {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
