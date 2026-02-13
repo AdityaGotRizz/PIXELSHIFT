@@ -109,7 +109,13 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-10 md:mb-20">
-                        <Button variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />} className="shadow-[0_0_20px_rgba(107,33,168,0.5)] hover:shadow-[0_0_30px_rgba(107,33,168,0.7)] w-full sm:w-auto justify-center">
+                        <Button
+                            variant="primary"
+                            size="lg"
+                            icon={<ArrowRight className="w-5 h-5" />}
+                            className="shadow-[0_0_20px_rgba(107,33,168,0.5)] hover:shadow-[0_0_30px_rgba(107,33,168,0.7)] w-full sm:w-auto justify-center"
+                            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
                             Explore Services
                         </Button>
                         <Button variant="secondary" size="lg" icon={<Play className="w-5 h-5 fill-current" />} className="w-full sm:w-auto justify-center">

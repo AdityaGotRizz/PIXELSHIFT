@@ -22,9 +22,7 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Services', href: '#services', type: 'hash' },
         { name: 'Process', href: '#process', type: 'hash' },
-        { name: 'Work', href: '#work', type: 'hash' },
         { name: 'Blog', href: '/blog', type: 'internal' },
         { name: 'Contact', href: '#contact', type: 'hash' },
     ];
@@ -87,12 +85,7 @@ const Navbar = () => {
                             ))}
                         </div>
 
-                        <button
-                            onClick={() => setIsLoginOpen(true)}
-                            className="text-gray-300 hover:text-white text-lg font-medium flex items-center gap-2"
-                        >
-                            <User className="w-5 h-5" /> Client Login
-                        </button>
+
 
                         <Button variant="primary" size="md" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
                             Start Project
@@ -139,12 +132,7 @@ const Navbar = () => {
                                         </a>
                                     )
                                 ))}
-                                <button
-                                    onClick={() => { setIsLoginOpen(true); setIsMobileMenuOpen(false); }}
-                                    className="text-left text-gray-300 hover:text-white text-lg font-medium flex items-center gap-2"
-                                >
-                                    <User className="w-4 h-4" /> Client Login
-                                </button>
+
                                 <Button variant="primary" className="w-full justify-center" onClick={() => { setIsMobileMenuOpen(false); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }}>
                                     Start Project
                                 </Button>
