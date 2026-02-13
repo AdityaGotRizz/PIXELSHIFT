@@ -53,11 +53,21 @@ const Navbar = () => {
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
-                    <Link to="/" className="flex items-baseline group">
-                        <span className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-white">BOLTSTUDIO</span>
-                        <span className="font-mono text-[10px] ml-2 text-primary opacity-70 group-hover:opacity-100 transition-opacity hidden lg:inline tracking-tighter uppercase font-bold">
-                            [ AI_SERVICES_CORE_v2.0 ]
-                        </span>
+                    <Link
+                        to="/"
+                        className="flex items-center gap-3 group"
+                        onClick={() => {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            setIsMobileMenuOpen(false);
+                        }}
+                    >
+                        <img src="/logo.jpg" alt="BoltStudio" className="w-16 h-16 rounded-full object-cover border-2 border-white/20 shadow-lg" />
+                        <div className="flex items-baseline">
+                            <span className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-white">BOLTSTUDIO</span>
+                            <span className="font-mono text-[10px] ml-2 text-primary opacity-70 group-hover:opacity-100 transition-opacity hidden lg:inline tracking-tighter uppercase font-bold">
+                                [ AI_SERVICES_CORE_v2.0 ]
+                            </span>
+                        </div>
                     </Link>
 
                     {/* Desktop Menu */}
