@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
 
                     <div className="prose prose-invert prose-lg max-w-none prose-headings:font-wide prose-headings:uppercase prose-headings:tracking-tight prose-p:font-sans prose-p:text-gray-300 prose-p:leading-relaxed">
                         <p className="lead text-2xl font-light text-white leading-relaxed mb-12">
-                            Welcome to BADDIE CONSULTING ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information.
+                            Welcome to BOLTSTUDIO ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information.
                         </p>
 
                         <h2 className="text-3xl text-white font-bold mb-6">1. Information We Collect</h2>
@@ -55,13 +55,13 @@ const PrivacyPolicy = () => {
                         <p>We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
 
                         <h2 className="text-3xl text-white font-bold mb-6">5. Your Rights</h2>
-                        <p>Depending on your location, you may have rights regarding your personal information, such as the right to access, correct, or delete your data. Contact us at privacy@baddieconsulting.com to exercise these rights.</p>
+                        <p>Depending on your location, you may have rights regarding your personal information, such as the right to access, correct, or delete your data. Contact us at privacy@boltstudio.com to exercise these rights.</p>
 
                         <h2 className="text-3xl text-white font-bold mb-6">6. Contact Us</h2>
                         <p>If you have questions about this Privacy Policy, please contact us at:</p>
                         <ul className="list-none space-y-2 mb-8 font-mono text-sm bg-white/5 p-6 rounded-lg border border-white/10">
-                            <li><strong>Email:</strong> privacy@baddieconsulting.com</li>
-                            <li><strong>Company:</strong> Baddie Consulting</li>
+                            <li><strong>Email:</strong> privacy@boltstudio.com</li>
+                            <li><strong>Company:</strong> BoltStudio</li>
                         </ul>
                     </div>
                 </div>

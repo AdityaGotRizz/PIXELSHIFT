@@ -29,11 +29,11 @@ const TermsOfService = () => {
 
                     <div className="prose prose-invert prose-lg max-w-none prose-headings:font-wide prose-headings:uppercase prose-headings:tracking-tight prose-p:font-sans prose-p:text-gray-300 prose-p:leading-relaxed">
                         <p className="lead text-2xl font-light text-white leading-relaxed mb-12">
-                            Welcome to BADDIE CONSULTING. These Terms of Service govern your access to and use of our website and services. By accessing or using our services, you agree to be bound by these Terms.
+                            Welcome to BOLTSTUDIO. These Terms of Service govern your access to and use of our website and services. By accessing or using our services, you agree to be bound by these Terms.
                         </p>
 
                         <h2 className="text-3xl text-white font-bold mb-6">1. Services</h2>
-                        <p>BADDIE CONSULTING provides AI-powered marketing content creation services, including product photography, video marketing, and social media content. You acknowledge that our services utilize artificial intelligence tools to create visual content.</p>
+                        <p>BOLTSTUDIO provides AI-powered marketing content creation services, including product photography, video marketing, and social media content. You acknowledge that our services utilize artificial intelligence tools to create visual content.</p>
 
                         <h2 className="text-3xl text-white font-bold mb-6">2. Client Obligations</h2>
                         <p>You agree to provide accurate project requirements and necessary materials. You represent that you have the rights to all materials provided to us. You are responsible for ensuring that your use of our deliverables complies with applicable laws and platform policies (e.g., Amazon, Shopify).</p>
@@ -45,12 +45,12 @@ const TermsOfService = () => {
                         <p>Upon full payment, we transfer ownership of the final deliverables to you. We retain the right to showcase the work in our portfolio unless you request otherwise.</p>
 
                         <h2 className="text-3xl text-white font-bold mb-6">5. Limitation of Liability</h2>
-                        <p>To the maximum extent permitted by law, BADDIE CONSULTING shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.</p>
+                        <p>To the maximum extent permitted by law, BOLTSTUDIO shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.</p>
 
                         <h2 className="text-3xl text-white font-bold mb-6">6. Contact Information</h2>
                         <ul className="list-none space-y-2 mb-8 font-mono text-sm bg-white/5 p-6 rounded-lg border border-white/10">
-                            <li><strong>Email:</strong> legal@baddieconsulting.com</li>
-                            <li><strong>Company:</strong> Baddie Consulting</li>
+                            <li><strong>Email:</strong> legal@boltstudio.com</li>
+                            <li><strong>Company:</strong> BoltStudio</li>
                         </ul>
                     </div>
                 </div>

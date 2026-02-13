@@ -1,13 +1,13 @@
 import React from 'react';
-import { Code, Image as ImageIcon, Video, Box, Cpu, Palette } from 'lucide-react';
+import { Code, Image as ImageIcon, Video, Box, Cpu, Palette, Megaphone, Layers, Bot } from 'lucide-react';
 import videoEditingImg from '../assets/images/video-editing-v2.png';
 import automationBg from '../assets/images/automation-bg.jpg';
 import newAesthetic from '../assets/images/new-aesthetic.jpg';
 
 export const servicesData = [
     {
-        icon: <Code className="w-8 h-8 text-blue-200" />,
-        title: "AI Website Generation",
+        icon: <Megaphone className="w-8 h-8 text-blue-200" />,
+        title: "COMMERCIAL ADS",
         subItems: ["What We Deliver", "Our Process", "Use Cases", "Turnaround Time", "Tools & Tech"],
         backgroundImage: newAesthetic
     },
@@ -17,8 +17,8 @@ export const servicesData = [
         subItems: ["What We Offer", "Specialties", "Turnaround"]
     },
     {
-        icon: <Video className="w-8 h-8 text-purple-200" />,
-        title: "Video Editing",
+        icon: <Layers className="w-8 h-8 text-purple-200" />,
+        title: "OTHERS",
         subItems: ["Services", "Video Types", "AI Features"],
         backgroundImage: videoEditingImg
     },
@@ -29,12 +29,12 @@ export const servicesData = [
     },
     {
         icon: <Box className="w-8 h-8 text-yellow-200" />,
-        title: "Brand Campaigns",
+        title: "CAMPAIGNS",
         subItems: ["Whats Included", "Categories", "Pricing Model"]
     },
     {
-        icon: <Palette className="w-8 h-8 text-orange-200" />,
-        title: "UI/UX Design",
+        icon: <Bot className="w-8 h-8 text-orange-200" />,
+        title: "AI AGENTS",
         subItems: ["Design Systems", "Prototyping", "User Research"]
     }
 ];

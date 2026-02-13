@@ -104,8 +104,12 @@ const Hero = () => {
                         </span>
                     </h1>
 
-                    <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-medium">
-                        We empower businesses to scale with AI-driven content. From high-end <span className="text-white">product photography</span> to <span className="text-white">automated marketing workflows</span>, we build the future of your brand.
+                    <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-4xl mx-auto mb-8 md:mb-12 leading-relaxed font-medium">
+                        We help businesses Scale by Integrating <span className="text-white">AI-powered Marketing Content</span> for E-Commerce, Brands, Influencers & Local Businesses.
+                        <br className="hidden md:block" />
+                        <span className="text-white">Product photography | Marketing videos | Social Media Content, Commercial Ads</span>.
+                        <br className="hidden md:block" />
+                        From Website Generation to Automated Workflows, We build the Future AND Much More.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-10 md:mb-20">
