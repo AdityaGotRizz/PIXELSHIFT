@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Loader2 } from 'lucide-react';
 import Button from '../components/ui/Button';
-
+import { supabase } from '../lib/supabaseClient';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -12,19 +12,41 @@ const Contact = () => {
         message: ''
     });
     const [status, setStatus] = useState('idle');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('loading');
-        setTimeout(() => {
+        setErrorMessage('');
+
+        try {
+            const { error } = await supabase
+                .from('contacts')
+                .insert([
+                    {
+                        name: formData.name,
+                        email: formData.email,
+                        project_type: formData.projectType,
+                        message: formData.message
+                    }
+                ]);
+
+            if (error) throw error;
+
             setStatus('success');
             setFormData({ name: '', email: '', projectType: 'Website Generation', message: '' });
-            setTimeout(() => setStatus('idle'), 3000);
-        }, 1500);
+            setTimeout(() => setStatus('idle'), 5000);
+
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setStatus('error');
+            setErrorMessage('Something went wrong. Please try again.');
+            setTimeout(() => setStatus('idle'), 5000);
+        }
     };
 
     return (
@@ -65,7 +87,6 @@ const Contact = () => {
                     viewport={{ once: true }}
                     onSubmit={handleSubmit}
                     className="bg-white/5 backdrop-blur-3xl p-6 md:p-12 border border-white/10 rounded-2xl relative overflow-hidden shadow-2xl"
-                >
                 >
                     {/* Form Background Pattern */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -128,13 +149,19 @@ const Contact = () => {
                         ></textarea>
                     </div>
 
+                    {status === 'error' && (
+                        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 text-red-500 rounded-xl text-center">
+                            {errorMessage}
+                        </div>
+                    )}
+
                     <div className="flex justify-center">
                         <Button
                             type="submit"
                             variant="primary"
                             size="lg"
                             className="w-full md:w-auto font-bold uppercase tracking-widest px-12 py-6 bg-[#8b0000] hover:bg-white hover:text-black transition-all duration-300 rounded-full"
-                            disabled={status === 'loading'}
+                            disabled={status === 'loading' || status === 'success'}
                         >
                             {status === 'loading' ? (
                                 <div className="flex items-center gap-2">
