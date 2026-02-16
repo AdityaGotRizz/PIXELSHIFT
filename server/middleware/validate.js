@@ -41,3 +41,25 @@ export const loginSchema = z.object({
     email: z.string().email('Invalid email address'),
     password: z.string().min(1)
 });
+
+// --- Project Schemas ---
+
+export const projectSchema = z.object({
+    title: z.string().min(3, 'Title must be at least 3 characters').max(100),
+    description: z.string().min(10, 'Description must be at least 10 characters'),
+    status: z.enum(['PLANNING', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD']).optional(),
+    deploymentUrl: z.string().url('Invalid deployment URL').optional().or(z.literal('')),
+    repoUrl: z.string().url('Invalid repository URL').optional().or(z.literal('')),
+    techStack: z.array(z.string()).optional()
+});
+
+export const updateProjectSchema = z.object({
+    title: z.string().min(3).max(100).optional(),
+    description: z.string().min(10).optional(),
+    status: z.enum(['PLANNING', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD']).optional(),
+    deploymentUrl: z.string().url().optional().or(z.literal('')),
+    repoUrl: z.string().url().optional().or(z.literal('')),
+    techStack: z.array(z.string()).optional()
+}).refine(data => Object.keys(data).length > 0, {
+    message: "At least one field must be provided for update"
+});

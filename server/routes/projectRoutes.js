@@ -1,5 +1,6 @@
 import express from 'express';
 import { protect } from '../controllers/authController.js';
+import { validate, projectSchema, updateProjectSchema } from '../middleware/validate.js';
 import {
     getAllProjects,
     createProject,
@@ -16,12 +17,12 @@ router.use(protect);
 router
     .route('/')
     .get(getAllProjects)
-    .post(createProject);
+    .post(validate(projectSchema), createProject);
 
 router
     .route('/:id')
     .get(getProject)
-    .patch(updateProject)
+    .patch(validate(updateProjectSchema), updateProject)
     .delete(deleteProject);
 
 export default router;

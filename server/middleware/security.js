@@ -27,13 +27,26 @@ export const configureSecurityMiddleware = (app) => {
     app.use(cors(corsOptions));
 
     // 3. Rate Limiting
-    // Limit requests from same API
-    const limiter = rateLimit({
-        max: 100, // Limit each IP to 100 requests per windowMs
-        windowMs: 60 * 60 * 1000, // 1 hour
-        message: 'Too many requests from this IP, please try again in an hour!'
+
+    // General API Limiter (300 requests per 15 mins)
+    const apiLimiter = rateLimit({
+        max: 300,
+        windowMs: 15 * 60 * 1000,
+        message: 'Too many requests from this IP, please try again in 15 minutes!',
+        standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+        legacyHeaders: false, // Disable the `X-RateLimit-*` headers
     });
-    app.use('/api', limiter);
+    app.use('/api', apiLimiter);
+
+    // Strict Auth Limiter (10 requests per 15 mins) - Brute force protection
+    const authLimiter = rateLimit({
+        max: 10,
+        windowMs: 15 * 60 * 1000,
+        message: 'Too many login attempts, please try again in 15 minutes!',
+        standardHeaders: true,
+        legacyHeaders: false,
+    });
+    app.use('/api/v1/auth', authLimiter);
 
     // 4. Data Sanitization against XSS
     app.use(xss());
