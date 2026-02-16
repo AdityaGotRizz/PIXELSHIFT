@@ -12,6 +12,9 @@ import BlogPost from './pages/BlogPost';
 
 import PrivacyPolicy from './pages/PrivacyPolicyTest';
 import TermsOfService from './pages/TermsOfService';
+import MenuPhotography from './pages/MenuPhotography';
+import FashionCampaigns from './pages/FashionCampaigns';
+import EcommerceProducts from './pages/EcommerceProducts';
 
 // Inline test component
 // const PrivacyPolicy = () => {
@@ -31,6 +34,9 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/work/menu-photography" element={<MenuPhotography />} />
+        <Route path="/work/fashion-campaigns" element={<FashionCampaigns />} />
+        <Route path="/work/ecommerce-products" element={<EcommerceProducts />} />
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
