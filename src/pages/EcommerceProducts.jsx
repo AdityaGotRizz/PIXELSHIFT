@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const EcommerceProducts = () => {
-    const [isUnlocked, setIsUnlocked] = useState(false);
+    // Initialize from session storage
+    const [isUnlocked, setIsUnlocked] = useState(() => {
+        return sessionStorage.getItem('galleryUnlocked') === 'true';
+    });
+
     const [formData, setFormData] = useState({
         name: '',
         gmail: '',
@@ -17,6 +21,7 @@ const EcommerceProducts = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form Submitted:', formData);
+        sessionStorage.setItem('galleryUnlocked', 'true');
         setIsUnlocked(true);
     };
 
@@ -108,8 +113,11 @@ const EcommerceProducts = () => {
                             <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 uppercase tracking-tight text-white">
                                 Exclusive Access
                             </h2>
-                            <p className="text-emerald-500 text-center font-mono text-sm mb-8 uppercase tracking-widest border-b border-white/10 pb-4">
+                            <p className="text-emerald-500 text-center font-mono text-sm mb-2 uppercase tracking-widest">
                                 The Gallery Can Only Be Visible After Sign Up
+                            </p>
+                            <p className="text-gray-500 text-center text-xs mb-8 italic">
+                                *One-time sign up for your current session.
                             </p>
 
                             <form onSubmit={handleSubmit} className="space-y-6">
