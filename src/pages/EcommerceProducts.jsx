@@ -22,7 +22,7 @@ const EcommerceProducts = () => {
 
     // Gallery images from public folder
     const techFolder = "/tech";
-    const productImages = [
+    const techImages = [
         "pr 3.png", "pr 4.png", "pr 5.png",
         "prd 1.png", "prd 10.png", "prd 11.png",
         "prd 13.png", "prd 2.png", "prd 3.png",
@@ -31,6 +31,22 @@ const EcommerceProducts = () => {
         src: `${techFolder}/${filename}`,
         alt: "Tech Product"
     }));
+
+    const productsFolder = "/products";
+    const miscImages = [
+        "beverage shots 1.png", "beverage shots 3.png", "beverage shots 4.png", "beverage shots 5.png",
+        "beverage shots 6.png", "beverage shots 7.png", "beverage shots 8.png", "beverage shots 9.png",
+        "beverage shots 10.png", "beverage shots 11.png", "beverage shots2.png",
+        "q 1.png", "q 2.png", "q 3.png", "q 4.png", "q 5.png", "q 6.png", "q 7.png",
+        "q 10.png", "q 11.png", "q 12.png", "q 13.png", "q 14.png", "q 17.png", "q 18.png", "q 19.png",
+        "q 20.png", "q 21.png", "q 22.png", "q 23.png", "q 24.png", "q 25.png",
+        "q 38.png", "q 39.png", "q 40.png", "q 41.png"
+    ].map(filename => ({
+        src: `${productsFolder}/${filename}`,
+        alt: "Product Shot"
+    }));
+
+    const productImages = [...techImages, ...miscImages];
 
     return (
         <div className="min-h-screen bg-dark-900 text-white relative">

@@ -3,7 +3,7 @@ import menuPhotography from '../assets/images/menu-photography.jpg';
 export const slides = [
     {
         id: 1,
-        image: "/MAIN COURSE - TOMAHAWK STEAK/Commercial_food_photography_202602161106 (2).jpeg",
+        image: "/APPETIZER - SEARED SCALLOPS/_variation_104_202602161056 (1).jpeg",
         title: "RESTAURANT & CAFE PHOTOGRAPHY",
         category: "Restaurant & Cafe",
         metrics: "APPETITE +100%",
