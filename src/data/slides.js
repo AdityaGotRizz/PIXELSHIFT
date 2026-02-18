@@ -1,5 +1,3 @@
-import menuPhotography from '../assets/images/menu-photography.jpg';
-
 export const slides = [
     {
         id: 1,
@@ -20,16 +18,5 @@ export const slides = [
         tags: ["AVANT-GARDE", "STUDIO", "HIGH-FASHION"],
         brief: "Bold and dynamic imagery for the modern fashion forward brand.",
         link: "/work/fashion-campaigns"
-    },
-    {
-        id: 3,
-        image: "/tech/pr 3.png",
-        title: "ECOMMERCE PRODUCTS",
-        category: "Technology",
-        metrics: "CONVERSION +100%",
-        tags: ["TECH", "PRODUCT", "STUDIO"],
-        brief: "Clean, crisp, and compelling product photography for the digital age.",
-        link: "/work/ecommerce-products"
     }
 ];
-

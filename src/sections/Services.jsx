@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import sailboatGlitch from '../assets/images/cosmic-sailboat-glitch.jpg';
 import industrialGlitch from '../assets/images/industrial-glitch-large.jpg';
-import aestheticFrame from '../assets/images/aesthetic-frame.jpg';
 import { servicesData } from '../data/services';
 
 
@@ -200,7 +198,7 @@ const Services = () => {
                                 <div className="group/profile relative border border-white/10 bg-white/5 md:backdrop-blur-sm overflow-hidden transform-gpu">
                                     <div className="aspect-[4/5] relative overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80" />
-                                        <img src="/david-portrait.png" className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="David" />
+                                        <img src="/david-portrait.png" loading="lazy" className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="David" />
                                     </div>
                                     <div className="absolute inset-0 z-20 flex flex-col justify-end p-6">
                                         <div className="text-[#8b0000] font-bold text-[10px] uppercase tracking-widest mb-2">
@@ -220,7 +218,7 @@ const Services = () => {
                                 <div className="group/profile relative border border-white/10 bg-white/5 md:backdrop-blur-sm overflow-hidden transform-gpu">
                                     <div className="aspect-[4/5] relative overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80" />
-                                        <img src={industrialGlitch} className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="Aditya" />
+                                        <img src={industrialGlitch} loading="lazy" className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="Aditya" />
                                     </div>
                                     <div className="absolute inset-0 z-20 flex flex-col justify-end p-6">
                                         <div className="text-[#8b0000] font-bold text-[10px] uppercase tracking-widest mb-2">
@@ -240,7 +238,7 @@ const Services = () => {
                                 <div className="group/profile relative border border-white/10 bg-white/5 md:backdrop-blur-sm overflow-hidden transform-gpu">
                                     <div className="aspect-[4/5] relative overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80" />
-                                        <img src="/MAX 1.png" className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="Max" />
+                                        <img src="/MAX 1.png" loading="lazy" className="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover/profile:grayscale-0 group-hover/profile:brightness-100 transition-all duration-700" alt="Max" />
                                     </div>
                                     <div className="absolute inset-0 z-20 flex flex-col justify-end p-6">
                                         <div className="text-[#8b0000] font-bold text-[10px] uppercase tracking-widest mb-2">

@@ -126,11 +126,12 @@ const Contact = () => {
                             onChange={handleChange}
                             className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white font-medium outline-none focus:border-[#8b0000] focus:bg-white/10 transition-all duration-300 appearance-none"
                         >
-                            <option className="bg-[#08081a] text-white" value="AI Website Generation">AI Website Generation</option>
-                            <option className="bg-[#08081a] text-white" value="Custom Image Gen">Custom Image Generation</option>
-                            <option className="bg-[#08081a] text-white" value="Video Editing">Video Editing</option>
+                            <option className="bg-[#08081a] text-white" value="Commercial Ads">Commercial Ads</option>
+                            <option className="bg-[#08081a] text-white" value="Custom Image Gen">Custom Image Gen</option>
                             <option className="bg-[#08081a] text-white" value="AI Automation">AI Automation</option>
-                            <option className="bg-[#08081a] text-white" value="Brand Campaigns">Brand Campaigns</option>
+                            <option className="bg-[#08081a] text-white" value="Campaigns">Campaigns</option>
+                            <option className="bg-[#08081a] text-white" value="AI Agents">AI Agents</option>
+                            <option className="bg-[#08081a] text-white" value="Video Editing">Video Editing</option>
                             <option className="bg-[#08081a] text-white" value="UI/UX Design">UI/UX Design</option>
                             <option className="bg-[#08081a] text-white" value="Other">Other Inquiry</option>
                         </select>

@@ -40,6 +40,7 @@ const Showcase = () => {
                         <img
                             src={slides[activeBg].image}
                             alt="Background"
+                            loading="lazy"
                             className="w-full h-full object-cover md:filter md:blur-3xl md:contrast-125 md:saturate-150 opacity-20 md:opacity-100"
                         />
                         <div className="absolute inset-0 bg-dark-900/50 mix-blend-multiply" />
@@ -83,6 +84,7 @@ const Showcase = () => {
                                     <img
                                         src={slide.image}
                                         alt={slide.title}
+                                        loading="lazy"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:brightness-50 transform-gpu"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-90" />
