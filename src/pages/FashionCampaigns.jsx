@@ -101,21 +101,7 @@ const FashionCampaigns = () => {
         alt: "Jan 1.2 Campaign"
     }));
 
-    const jan13Folder = "/13 JAN 1.3 ASDF";
-    const jan13Images = [
-        "For_model_reference_2k_202602131242 (1).jpeg",
-        "For_model_reference_2k_202602131242 (2).jpeg",
-        "For_model_reference_2k_202602131309 (1).jpeg",
-        "For_model_reference_2k_202602131309 (2).jpeg",
-        "Holding_the_flannel_2k_202602131308.jpeg",
-        "Model_sitting_on_2k_202602131307 (1).jpeg",
-        "Sitting_on_the_2k_202602131308 (1).jpeg",
-        "Standing_with_the_2k_202602131309.jpeg",
-        "Walking_toward_the_2k_202602131307 (1).jpeg"
-    ].map(filename => ({
-        src: `${jan13Folder}/${filename}`,
-        alt: "Jan 1.3 Campaign"
-    }));
+
 
     const jan15Folder = "/15 JAN 3.1 ASDF";
     const jan15Images = [
@@ -136,7 +122,7 @@ const FashionCampaigns = () => {
         alt: "Jan 3.1 Campaign"
     }));
 
-    const galleryImages = [...fashionImages, ...jan15Images, ...jan12Images, ...jan13Images, ...jan11Images];
+    const galleryImages = [...fashionImages, ...jan15Images, ...jan12Images, ...jan11Images];
 
     return (
         <div className="min-h-screen bg-dark-900 text-white relative">
