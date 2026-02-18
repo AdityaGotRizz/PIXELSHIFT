@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://boltstudio.ai/sitemap.xml

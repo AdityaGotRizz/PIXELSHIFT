@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Share2, Calendar, Tag } from 'lucide-react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
+import SEO from '../components/SEO';
 import { blogPosts } from '../data/blogPosts';
 
 const BlogPost = () => {
@@ -106,6 +107,12 @@ const BlogPost = () => {
 
     return (
         <PageTransition>
+            <SEO
+                title={post.title}
+                description={post.excerpt}
+                url={`/blog/${post.id}`}
+                type="article"
+            />
             <article className="min-h-screen bg-dark-900 pt-32 pb-40 px-6">
                 {/* Progress Bar (Fake) */}
                 <motion.div

@@ -3,12 +3,18 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
+import SEO from '../components/SEO';
 
 import { blogPosts } from '../data/blogPosts';
 
 const BlogIndex = () => {
     return (
         <PageTransition>
+            <SEO
+                title="Blog"
+                description="Insights from the bleeding edge of interface capability and strategic automation. Read our latest articles on AI, design, and growth."
+                url="/blog"
+            />
             <section className="min-h-screen bg-dark-900 pt-32 pb-20 px-6">
                 <div className="container mx-auto max-w-5xl">
                     <div className="flex flex-col items-start mb-20">

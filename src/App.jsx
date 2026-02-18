@@ -47,6 +47,7 @@ const AnimatedRoutes = () => {
 };
 
 import ScrollToTop from './components/ScrollToTop';
+import SEO from './components/SEO';
 
 function App() {
   useCanvasCursor();
@@ -54,6 +55,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <SEO />
       <div className="min-h-screen bg-dark-900 text-white selection:bg-primary/30 relative overflow-x-hidden">
         <canvas id="canvas" className="fixed top-0 left-0 w-full h-full pointer-events-none z-50 mix-blend-screen" />
         <Navbar />
