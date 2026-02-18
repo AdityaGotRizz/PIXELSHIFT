@@ -33,8 +33,8 @@ const FashionCampaigns = () => {
                     {
                         name: formData.name,
                         email: formData.gmail,
-                        project_type: 'Gallery Unlock: Fashion Campaigns',
-                        message: `User Country: ${formData.country}`
+                        project_type: 'Other',
+                        message: `LEAD_SOURCE: Gallery Unlock (Fashion Campaigns) | Country: ${formData.country}`
                     }
                 ]);
 

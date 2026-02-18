@@ -32,8 +32,8 @@ const EcommerceProducts = () => {
                     {
                         name: formData.name,
                         email: formData.gmail,
-                        project_type: 'Gallery Unlock: Product Photography',
-                        message: `User Country: ${formData.country}`
+                        project_type: 'Other',
+                        message: `LEAD_SOURCE: Gallery Unlock (Product Photography) | Country: ${formData.country}`
                     }
                 ]);
 

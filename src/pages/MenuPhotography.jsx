@@ -29,8 +29,8 @@ const MenuPhotography = () => {
                     {
                         name: formData.name,
                         email: formData.gmail,
-                        project_type: 'Gallery Unlock: Menu Photography',
-                        message: `User Country: ${formData.country}`
+                        project_type: 'Other',
+                        message: `LEAD_SOURCE: Gallery Unlock (Menu Photography) | Country: ${formData.country}`
                     }
                 ]);
 
