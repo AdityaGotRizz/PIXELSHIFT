@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { supabase } from '../lib/supabaseClient';
+
 const FashionCampaigns = () => {
     // Initialize from session storage
     const [isUnlocked, setIsUnlocked] = useState(() => {
         return sessionStorage.getItem('galleryUnlocked') === 'true';
     });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [formData, setFormData] = useState({
         name: '',
@@ -18,11 +22,33 @@ const FashionCampaigns = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form Submitted:', formData);
-        sessionStorage.setItem('galleryUnlocked', 'true');
-        setIsUnlocked(true);
+        setIsSubmitting(true);
+
+        try {
+            const { error } = await supabase
+                .from('contacts')
+                .insert([
+                    {
+                        name: formData.name,
+                        email: formData.gmail,
+                        project_type: 'Gallery Unlock: Fashion Campaigns',
+                        message: `User Country: ${formData.country}`
+                    }
+                ]);
+
+            if (error) throw error;
+
+            // Success
+            sessionStorage.setItem('galleryUnlocked', 'true');
+            setIsUnlocked(true);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Something went wrong. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     // Gallery images from public folder
@@ -221,9 +247,10 @@ const FashionCampaigns = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-amber-600 hover:bg-amber-600/80 text-white font-bold py-4 rounded uppercase tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] mt-4"
+                                    disabled={isSubmitting}
+                                    className="w-full bg-amber-600 hover:bg-amber-600/80 text-white font-bold py-4 rounded uppercase tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Unlock Collection
+                                    {isSubmitting ? "Unlocking..." : "Unlock Collection"}
                                 </button>
                             </form>
 

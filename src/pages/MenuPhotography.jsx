@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { supabase } from '../lib/supabaseClient';
 
 
 const MenuPhotography = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -16,11 +18,32 @@ const MenuPhotography = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you would typically send data to a backend
-        console.log('Form Submitted:', formData);
-        setIsUnlocked(true);
+        setIsSubmitting(true);
+
+        try {
+            const { error } = await supabase
+                .from('contacts')
+                .insert([
+                    {
+                        name: formData.name,
+                        email: formData.gmail,
+                        project_type: 'Gallery Unlock: Menu Photography',
+                        message: `User Country: ${formData.country}`
+                    }
+                ]);
+
+            if (error) throw error;
+
+            // Success
+            setIsUnlocked(true);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Something went wrong. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     // Gallery images from public folder
@@ -220,9 +243,10 @@ const MenuPhotography = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-accent-blue hover:bg-accent-blue/80 text-white font-bold py-4 rounded uppercase tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] mt-4"
+                                    disabled={isSubmitting}
+                                    className="w-full bg-accent-blue hover:bg-accent-blue/80 text-white font-bold py-4 rounded uppercase tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Unlock Gallery
+                                    {isSubmitting ? "Unlocking..." : "Unlock Gallery"}
                                 </button>
                             </form>
 
